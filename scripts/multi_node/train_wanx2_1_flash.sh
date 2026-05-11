@@ -18,5 +18,5 @@ export WANDB_API_KEY=''
 accelerate launch --config_file scripts/accelerate_configs/deepspeed_zero2.yaml \
     --num_machines 12 --num_processes 96 \
     --machine_rank ${RANK} --main_process_ip ${MASTER_ADDR} --main_process_port ${PORT} \
-    scripts/train_wanx2_1_sample.py \
+    scripts/train_wanx2_1_flash.py \
     --config config/dgx.py:wan2_1_flash
