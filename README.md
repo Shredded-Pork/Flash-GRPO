@@ -28,7 +28,7 @@ from timestep difficulty; temporal gradient rectification neutralizes the time-d
 ## 🆕 News
 
 > We have presented a single-step training framework, **Flash-GRPO**.
-- **[2026-05-11]**  We release the code of our paper, and we alse release a 8 gpus version of Flash-GRPO (can achieve the same performance). 🔥🔥🔥
+- **[2026-05-11]**  We release the code of our paper, and we also release a 8 gpus version of Flash-GRPO (can achieve the same performance). 🔥🔥🔥
 
 
 ## 📕 Training & Evaluation
