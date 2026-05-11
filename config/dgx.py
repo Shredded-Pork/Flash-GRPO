@@ -50,7 +50,7 @@ def wan2_1_flash():
     config.train.num_inner_epochs = 1
     config.train.timestep_fraction = 0.51
     # kl loss
-    config.train.beta = 0.001
+    config.train.beta = 0
     config.train.learning_rate = 1e-4
     config.train.clip_range=1e-3
     # kl reward
