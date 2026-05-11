@@ -53,10 +53,10 @@ bash scripts/multi_node/train_wan2_1_flash_1node.sh
 ```
 
 ## 📊 Experimental Performance
-<img src="asset/performance.png" alt="Performance" width="800"/>
+<img src="asset/exp1.png" alt="Performance" width="800"/>
 
 ## 📺 Visualization
-<img src="asset/appendix_vis4.png" alt="FLUX.1-dev" width="1024"/> 
+<img src="asset/vis.png" alt="Visualization" width="1024"/> 
 
 - For more details please read our paper.
 
