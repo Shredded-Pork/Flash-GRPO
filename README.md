@@ -12,11 +12,11 @@
 **TempFlow-GRPO** (Temporal Flow GRPO), a principled GRPO framework that captures and exploits the temporal structure inherent in flow-based generation. 
 
 <div style="text-align: center;">
-    <img src="asset/figure3.jpg" alt="LOGO">
+    <img src="asset/teaser.png" alt="LOGO">
 </div>
 
 <div style="text-align: center;">
-    <img src="asset/teaser.png" alt="LOGO">
+    <img src="asset/method.png" alt="LOGO">
 </div>
 
 ## 🗺️ Roadmap for TempFlow-GRPO
