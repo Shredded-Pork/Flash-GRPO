@@ -9,7 +9,7 @@
     <img alt="Website" src="https://img.shields.io/badge/💻_Project-Flash--GRPO-blue.svg" height="20" /></a>
 </div>
 
-**TempFlow-GRPO** (Temporal Flow GRPO), a principled GRPO framework that captures and exploits the temporal structure inherent in flow-based generation. 
+**Flash-GRPO**, a single-step training framework that outperforms full trajectory training in alignment quality under low computational budgets while substantially improving training efficiency.
 
 <div style="text-align: center;">
     <img src="asset/teaser.png" alt="LOGO">
@@ -19,35 +19,11 @@
     <img src="asset/method.png" alt="LOGO">
 </div>
 
-## 🗺️ Roadmap for TempFlow-GRPO
-> TempFlow-GRPO (Temporal Flow GRPO), a principled GRPO framework that captures and exploits the temporal structure inherent in flow-based generation. TempFlow-GRPO introduces two key innovations: (i) a trajectory branching mechanism that provides process rewards by concentrating stochasticity at designated branching points, enabling precise credit assignment without requiring specialized intermediate reward models; and (ii) a noise-aware weighting scheme that modulates policy optimization according to the intrinsic exploration potential of each timestep, prioritizing learning during high-impact early stages while ensuring stable refinement in later phases. These innovations endow the model with temporally-aware optimization that respects the underlying generative dynamics, leading to state-of-the-art performance in human preference alignment and standard text-to-image benchmark.
+## 🗺️ Roadmap for Flash-GRPO
+> Flash-GRPO, a single-step training framework that outperforms full trajectory trainingin alignment quality under low computational budgets while substantially improving training efficiency. Flash-GRPO addresses two critical challenges: iso-temporal grouping eliminates timestep-confounded variance by enforcing prompt-wise temporal consistency, decoupling policy performance
+from timestep difficulty; temporal gradient rectification neutralizes the time-dependent scaling factor that causes vastly inconsistent gradient magnitudes across timesteps. Experiments on 1.3B to 14B parameter models validate Flash-GRPO’s effectiveness, demonstrating substantial training acceleration with consistent stability and state-of-the-art alignment qualit
 > 
 > Welcome Ideas and Contributions. Stay tuned!
-
-## 🆕 News
-
-> We have presented an improved **Flow-GRPO** method, **TempFlow-GRPO**. We will release our code recently!🔥🔥🔥
-- **[2025-08-06]**  We have released the first version of our paper. 🔥🔥🔥
-- **[2025-08-11]**  Thanks [Jie Liu's](https://jieliu.site/) comments for our paper. We will release the 1024 Flux RL model in the month. 🔥🔥🔥
-- **[2025-08-14]**  Our method also achieves better performance in FLUX 1024px with HPSv3 (based on Qwen2-VL) as reward. 🔥🔥🔥
-- **[2025-08-20]**  We have released the first version of our paper in huggface. 🔥🔥🔥
-- **[2025-09-12]**  We will release the second version of our paper in next week. 🔥🔥🔥
-- **[2025-09-17]**  We will release the code of our paper. 🔥🔥🔥
-- **[2025-10-28]**  Very happy to see TempFlow-GRPO in video RL of meituan's [Longcat-Video](https://github.com/meituan-longcat/LongCat-Video). 🔥🔥🔥
-- **[2025-10-28]**  Very happy to see TempFlow-GRPO in image edit RL of baai's [OmniGen2-EditScore](https://github.com/VectorSpaceLab/EditScore). 🔥🔥🔥
-- **[2025-11-10]**  Upload the code for QwenImage. 🔥🔥🔥
-
-
-
-
-
-## 🚀 Updates
-To support research and the open-source community, we will release the entire project—including datasets, training pipelines, and model weights. **Our code is based on Flow-GRPO!**. Thank you for your patience and continued support! 🌟
-- [x] Release arXiv paper
-- [x] Release GitHub repo
-- [x] Release training code
-- [ ] Release neat training code
-- [ ] Release model checkpoints
 
 ## 📕 Training & Evaluation
 ### Preparation
