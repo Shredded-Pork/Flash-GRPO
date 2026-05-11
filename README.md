@@ -5,8 +5,8 @@
 
 <a href="" target="_blank">
     <img alt="arXiv" src="https://img.shields.io/badge/arXiv-Flash-GRPO-red?logo=arxiv" height="20" /></a>
-<a href="https://tempflowgrpo.github.io/" target="_blank">
-    <img alt="Website" src="https://img.shields.io/badge/💻_Project-Flash-GRPO-blue.svg" height="20" /></a>
+<a href="https://shredded-pork.github.io/Flash-GRPO.github.io/" target="_blank">
+    <img alt="Website" src="https://img.shields.io/badge/💻_Project-Flash--GRPO-blue.svg" height="20" /></a>
 </div>
 
 **TempFlow-GRPO** (Temporal Flow GRPO), a principled GRPO framework that captures and exploits the temporal structure inherent in flow-based generation. 
