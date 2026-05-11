@@ -25,47 +25,32 @@ from timestep difficulty; temporal gradient rectification neutralizes the time-d
 > 
 > Welcome Ideas and Contributions. Stay tuned!
 
+## 🆕 News
+
+> We have presented a single-step training framework, **Flash-GRPO**.
+- **[2026-05-11]**  We will release the code of our paper, and we alse release a 8 gpus version of Flash-GRPO (can achieve the same performance). 🔥🔥🔥
+
+
 ## 📕 Training & Evaluation
 ### Preparation
-1. First you need to download the reward model (we support clip-based pickscore, vlm-based hpsv3, ...) and base model (SD3.5-M, FLUX.1-dev).
-2. Then you need to modify the noise level in [sd3_pipeline_with_logprob_perstep](https://github.com/Shredded-Pork/TempFlow-GRPO/blob/main/flow_grpo/diffusers_patch/sd3_pipeline_with_logprob_perstep.py) and [sd3_pipeline_with_logprob](https://github.com/Shredded-Pork/TempFlow-GRPO/blob/main/flow_grpo/diffusers_patch/sd3_pipeline_with_logprob.py).
-3. Finally, you need to modify the [config](https://github.com/Shredded-Pork/TempFlow-GRPO/blob/main/config/dgx.py). We suggest you using 24 groups and 48 num groups.
-
-**Note that we use branch=4, per branch exploration=6. You can modify them in our code. We will release a neat code verision in next few days.**
+Download the reward model [HPSV3](https://github.com/MizzenAI/HPSv3) and base model [Wan2.1-1.3B](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B-Diffusers).
 
 ### Training
-#### About Group Strategy
-1. Seed Group:
-<img width="1011" height="45" alt="image" src="https://github.com/user-attachments/assets/e865d9db-3f8f-45a7-a497-2298b0013a42" />
-<img width="894" height="41" alt="image" src="https://github.com/user-attachments/assets/9953b278-3c91-4b27-8ac5-f67c0199b5f4" />
-<img width="892" height="119" alt="image" src="https://github.com/user-attachments/assets/06771eb4-6974-4ddf-a02e-2ec29b3382c4" />
-
-2. Prompt Group: notes the seed group
-
-3. Batch Group: global_std=True
-   
-#### SD3.5-M
+#### Reward server
 ```bash
-# Flow-GRPO
-bash scripts/multi_node/main.sh
-# TempFlow-GRPO
-bash scripts/multi_node/train_sd3_pr.sh
+cd flow_grpo/reward-server
+gunicorn "app_hpsv3:create_app()" 
 ```
-#### FLUX.1-dev
+#### Wan2.1-1.3B
 ```bash
-# Flow-GRPO
-bash scripts/multi_node/train_flux.sh
-# TempFlow-GRPO
-bash scripts/multi_node/train_flux_pr.sh
+# Flash-GRPO 96GPUs
+bash scripts/multi_node/train_wan2_1_flash.sh
 ```
-#### QwenImage
+#### Wan2.1-1.3B-1node
 ```bash
-# Flow-GRPO
-bash scripts/multi_node/train_qwenimage.sh
-# TempFlow-GRPO
-bash scripts/multi_node/train_qwenimage_pr.sh
+# Flash-GRPO 8GPUs
+bash scripts/multi_node/train_wan2_1_flash_1node.sh
 ```
-
 
 ## 📊 Experimental Performance
 <img src="asset/performance.png" alt="Performance" width="800"/>
