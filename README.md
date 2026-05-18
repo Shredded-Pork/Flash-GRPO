@@ -4,7 +4,7 @@
 
 
 <a href="https://arxiv.org/abs/2605.15980" target="_blank">
-    <img alt="arXiv" src="https://img.shields.io/badge/arXiv-Flash-GRPO-red?logo=arxiv" height="20" /></a>
+    <img alt="arXiv" src="https://img.shields.io/badge/arXiv-Flash--GRPO-red?logo=arxiv" height="20" /></a>
 <a href="https://shredded-pork.github.io/Flash-GRPO.github.io/" target="_blank">
     <img alt="Website" src="https://img.shields.io/badge/💻_Project-Flash--GRPO-blue.svg" height="20" /></a>
 </div>
